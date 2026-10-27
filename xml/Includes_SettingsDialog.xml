@@ -252,35 +252,41 @@
 		</control>
 		<control type="radiobutton" id="22102">
 			<include>DialogSettingButton</include>
+			<label>$LOCALIZE[31616]</label>
+			<onclick>Skin.ToggleSetting(home_no_movies_allmovies_widget)</onclick>
+			<selected>!Skin.HasSetting(home_no_movies_allmovies_widget)</selected>
+		</control>
+		<control type="radiobutton" id="22103">
+			<include>DialogSettingButton</include>
 			<label>$LOCALIZE[31010]</label>
 			<onclick>Skin.ToggleSetting(home_no_movies_inprogress_widget)</onclick>
 			<selected>!Skin.HasSetting(home_no_movies_inprogress_widget)</selected>
 		</control>
-		<control type="radiobutton" id="22103">
+		<control type="radiobutton" id="22104">
 			<include>DialogSettingButton</include>
 			<label>$LOCALIZE[20386]</label>
 			<onclick>Skin.ToggleSetting(home_no_movies_recentlyadded_widget)</onclick>
 			<selected>!Skin.HasSetting(home_no_movies_recentlyadded_widget)</selected>
 		</control>
-		<control type="radiobutton" id="22104">
+		<control type="radiobutton" id="22105">
 			<include>DialogSettingButton</include>
 			<label>$LOCALIZE[31007]</label>
 			<onclick>Skin.ToggleSetting(home_no_movies_unwatched_widget)</onclick>
 			<selected>!Skin.HasSetting(home_no_movies_unwatched_widget)</selected>
 		</control>
-		<control type="radiobutton" id="22105">
+		<control type="radiobutton" id="22106">
 			<include>DialogSettingButton</include>
 			<label>$LOCALIZE[31006]</label>
 			<onclick>Skin.ToggleSetting(home_no_movies_random_widget)</onclick>
 			<selected>!Skin.HasSetting(home_no_movies_random_widget)</selected>
 		</control>
-		<control type="radiobutton" id="22106">
+		<control type="radiobutton" id="22107">
 			<include>DialogSettingButton</include>
 			<label>$LOCALIZE[135]</label>
 			<onclick>Skin.ToggleSetting(home_no_movies_genres_widget)</onclick>
 			<selected>!Skin.HasSetting(home_no_movies_genres_widget)</selected>
 		</control>
-		<control type="radiobutton" id="22107">
+		<control type="radiobutton" id="22108">
 			<include>DialogSettingButton</include>
 			<label>$LOCALIZE[31075]</label>
 			<onclick>Skin.ToggleSetting(home_no_movies_sets_widget)</onclick>
