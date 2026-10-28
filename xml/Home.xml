@@ -58,7 +58,7 @@
 							<param name="widget_target" value="videos"/>
 							<param name="list_id" value="5900"/>
 						</include>
-						<include content="WidgetListPoster" condition="Library.HasContent(movies) + !Skin.HasSetting(home_no_movies_allmovies_widget)">
+						<include content="WidgetListPosterTiled" condition="Library.HasContent(movies) + !Skin.HasSetting(home_no_movies_allmovies_widget)">
 							<param name="content_path" value="videodb://movies/titles/"/>
 							<param name="additional_movie_items" value="false"/>
 							<param name="widget_header" value="$LOCALIZE[31616]"/>
@@ -1170,7 +1170,7 @@
 				<animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
 				<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
 				<top>30</top>
-				<left>90</left>
+				<left>40</left>
 				<control type="image">
 					<left>4</left>
 					<top>0</top>
