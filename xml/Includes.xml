@@ -1755,4 +1755,18 @@
 			</focusedlayout>
 		</definition>
 	</include>
+	<!-- Home sidebar layout: compact -->
+	<include name="HomeSidebarCompactWidth">
+		<width>110</width>
+	</include>
+	<include name="HomeContentCompactLeft">
+		<left>110</left>
+	</include>
+	<!-- Home sidebar layout: expanded -->
+	<include name="HomeSidebarExpandedWidth">
+		<width>362</width>
+	</include>
+	<include name="HomeContentExpandedLeft">
+		<left>362</left>
+	</include>
 </includes>

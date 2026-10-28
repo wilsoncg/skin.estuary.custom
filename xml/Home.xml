@@ -33,7 +33,8 @@
 		<control type="group">
 			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="$EXP[infodialog_active]">Conditional</animation>
 			<control type="group" id="2000">
-				<left>362</left>
+				<include condition="Skin.HasSetting(expanded_home_sidebar)">HomeContentExpandedLeft</include>
+				<include condition="!Skin.HasSetting(expanded_home_sidebar)">HomeContentCompactLeft</include>
 				<animation type="Conditional" condition="Control.IsVisible(20000)" reversible="false">
 					<effect type="slide" end="0,20" time="60" tween="sine" />
 					<effect type="slide" end="0,-20" time="180" tween="sine" delay="80" />
@@ -903,13 +904,17 @@
 			<control type="group">
 				<depth>DepthContentPanel</depth>
 				<include>OpenClose_Left</include>
-				<include content="ContentPanel">
+				<include content="ContentPanel" condition="Skin.HasSetting(expanded_home_sidebar)">
 					<param name="width" value="422" />
+				</include>
+				<include content="ContentPanel" condition="!Skin.HasSetting(expanded_home_sidebar)">
+					<param name="width" value="170" />
 				</include>
 				<control type="fixedlist" id="9000">
 					<left>0</left>
 					<top>240</top>
-					<width>362</width>
+					<include condition="Skin.HasSetting(expanded_home_sidebar)">HomeSidebarExpandedWidth</include>
+					<include condition="!Skin.HasSetting(expanded_home_sidebar)">HomeSidebarCompactWidth</include>
 					<bottom>-10</bottom>
 					<movement>7</movement>
 					<focusposition>0</focusposition>
@@ -924,7 +929,8 @@
 							<control type="image">
 								<left>0</left>
 								<top>0</top>
-								<width>362</width>
+								<include condition="Skin.HasSetting(expanded_home_sidebar)">HomeSidebarExpandedWidth</include>
+								<include condition="!Skin.HasSetting(expanded_home_sidebar)">HomeSidebarCompactWidth</include>
 								<height>95</height>
 								<texture colordiffuse="button_focus">lists/focus.png</texture>
 								<animation effect="fade" start="100" end="0" time="0" condition="[!Control.HasFocus(9000) + !ControlGroup(700).HasFocus] | System.HasActiveModalDialog">Conditional</animation>
@@ -962,6 +968,7 @@
 							<font>font37</font>
 							<label>$INFO[ListItem.Label]</label>
 							<shadowcolor>text_shadow</shadowcolor>
+							<visible>Skin.HasSetting(expanded_home_sidebar)</visible>
 						</control>
 					</focusedlayout>
 					<itemlayout height="95">
@@ -981,6 +988,7 @@
 							<font>font37</font>
 							<label>$INFO[ListItem.Label]</label>
 							<shadowcolor>text_shadow</shadowcolor>
+							<visible>Skin.HasSetting(expanded_home_sidebar)</visible>
 						</control>
 					</itemlayout>
 					<content>
@@ -1170,14 +1178,14 @@
 				<animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
 				<animation effect="fade" start="100" end="0" time="200">WindowClose</animation>
 				<top>30</top>
-				<left>40</left>
+				<left>0</left>
 				<control type="image">
-					<left>4</left>
+					<left>11</left>
 					<top>0</top>
 					<aspectratio>keep</aspectratio>
-					<width>192</width>
-					<height>56</height>
-					<texture>special://xbmc/media/vendor_logo.png</texture>
+					<width>80</width>
+					<height>80</height>
+					<texture>special://skin/media/kodi-logo.png</texture>
 				</control>
 			</control>
 		</control>
