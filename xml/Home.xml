@@ -20,9 +20,7 @@
 		<include>DefaultBackground</include>
 		<control type="group">
 			<visible>!Player.HasMedia + !String.IsEmpty(Container.ListItem.Art(fanart))</visible>
-    		<animation effect="fade" time="400" tween="sine">VisibleChange</animation>
-
-				
+    		<animation effect="fade" time="400" tween="sine">VisibleChange</animation>				
 			<!-- Black backing for the smaller fanart area -->
 			<control type="image">
 				<description>Black background behind Home fanart</description>
@@ -47,6 +45,45 @@
 				<aspectratio>stretch</aspectratio>
 				<texture colordiffuse="black">bg_gradient.png</texture>
 				<animation effect="fade" start="0" end="100" time="100">WindowClose</animation>
+			</control>
+
+			<!-- Film information -->
+			<control type="group">
+				<visible>String.IsEqual(Container.ListItem.DBTYPE,movie) + !String.IsEmpty(Container.ListItem.Art(fanart))</visible>
+				<left>48%</left>
+				<top>55%</top>
+				<width>50%</width>
+				<height>40%</height>
+
+				<!-- Movie title -->
+				<control type="textbox">
+					<top>0</top>
+					<width>100%</width>
+					<height>20%</height>
+					<font>font36_title</font>
+					<textcolor>FFFFFFFF</textcolor>
+					<label>$INFO[ListItem.Label]</label>
+				</control>
+
+				<!-- Year and director -->
+				<control type="label">
+					<top>20%</top>
+					<width>100%</width>
+					<height>10%</height>
+					<font>font16</font>
+					<textcolor>FFCCCCCC</textcolor>
+					<label>$INFO[ListItem.Year] ($INFO[ListItem.Rating]) • $INFO[ListItem.Director]</label>
+				</control>
+
+				<!-- Short plot summary -->
+				<control type="textbox">
+					<top>32%</top>
+					<width>100%</width>
+					<height>65%</height>
+					<font>font13</font>
+					<textcolor>FFE0E0E0</textcolor>
+					<label>$INFO[ListItem.Plot]</label>
+				</control>
 			</control>
 		</control>
 		<control type="group">
