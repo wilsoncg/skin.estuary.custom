@@ -18,17 +18,34 @@
 			<visible allowhiddenfocus="true">Control.HasFocus(20001)</visible>
 		</control>
 		<include>DefaultBackground</include>
+		<!-- Black backing for the smaller fanart area -->
+		<control type="image">
+			<description>Black background behind Home fanart</description>
+			<left>0</left>
+			<top>0</top>
+			<width>100%</width>
+			<height>100%</height>
+			<texture colordiffuse="black">colors/white.png</texture>
+			<visible>!Player.HasMedia + !String.IsEmpty(Container.ListItem.Art(fanart))</visible>
+		</control>
 		<control type="multiimage">
 			<depth>DepthBackground</depth>
-			<include>FullScreenDimensions</include>
+			<include>ThreeQuarterScreenDimensions</include>
 			<aspectratio>scale</aspectratio>
 			<fadetime>600</fadetime>
 			<animation effect="zoom" center="auto" end="102,102" time="0" condition="Integer.IsGreater(System.StereoscopicMode,0)">conditional</animation>
 			<animation effect="fade" start="0" end="100" time="400">WindowOpen</animation>
-			<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
+			<animation effect="fade" start="100" end="0" time="400">WindowClose</animation>
 			<animation effect="fade" time="400">VisibleChange</animation>
-			<imagepath background="true" colordiffuse="bg_overlay">$VAR[HomeFanartVar]</imagepath>
+			<imagepath background="true">$VAR[HomeFanartVar]</imagepath>
 			<visible>!Player.HasMedia</visible>
+		</control>
+		<control type="image">
+			<description>Dark left-to-right fanart gradient</description>
+			<include>ThreeQuarterScreenDimensions</include>
+			<aspectratio>stretch</aspectratio>
+			<texture colordiffuse="black">bg_gradient.png</texture>
+			<visible>!Player.HasMedia + !String.IsEmpty(Container.ListItem.Art(fanart))</visible>
 		</control>
 		<control type="group">
 			<animation effect="fade" start="100" end="0" time="200" tween="sine" condition="$EXP[infodialog_active]">Conditional</animation>
@@ -1106,11 +1123,11 @@
 					</content>
 				</control>
 				<control type="grouplist" id="700">
-					<orientation>horizontal</orientation>
+					<orientation>vertical</orientation>
 					<itemgap>0</itemgap>
 					<left>-8</left>
-					<width>280</width>
-					<height>110</height>
+					<width>110</width>
+					<height>410</height>
 					<bottom>20</bottom>
 					<onup>SetFocus(9000,99,absolute)</onup>
 					<ondown>SetFocus(9000,0,absolute)</ondown>
