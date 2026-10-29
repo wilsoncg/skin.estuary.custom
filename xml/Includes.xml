@@ -473,7 +473,7 @@
 				</include>
 			</control>
 			<control type="grouplist">
-				<visible>Player.ShowInfo + !Player.ChannelPreviewActive + Window.IsActive(visualisation)</visible>)
+				<visible>Player.ShowInfo + !Player.ChannelPreviewActive + Window.IsActive(visualisation)</visible>
 				<orientation>horizontal</orientation>
 				<right>20</right>
 				<bottom>9</bottom>
@@ -1223,6 +1223,13 @@
 		<height>100</height>
 		<width>auto</width>
 	</include>
+	<include name="BlackBackground">
+		<control type="image">
+			<depth>DepthBackground</depth>
+			<include>FullScreenDimensions</include>
+			<texture>colors/black.png</texture>
+		</control>
+	</include>
 	<include name="FlatBackground">
 		<control type="image">
 			<depth>DepthBackground</depth>
@@ -1236,13 +1243,6 @@
 			<include>FullScreenDimensions</include>
 			<aspectratio>scale</aspectratio>
 			<texture colordiffuse="primary_background">special://skin/extras/backgrounds/primary.jpg</texture>
-		</control>
-		<control type="image">
-			<depth>DepthBackground</depth>
-			<include>FullScreenDimensions</include>
-			<aspectratio>scale</aspectratio>
-			<texture colordiffuse="secondary_background" fallback="special://skin/extras/backgrounds/pattern1.png">$INFO[Skin.String(background_overlay),special://skin/extras/backgrounds/pattern,.png]</texture>
-			<visible>!String.IsEqual(Skin.String(background_overlay),0)</visible>
 		</control>
 	</include>
 	<include name="DefaultBackground">
@@ -1264,7 +1264,7 @@
 				<control type="group">
 					<animation effect="fade" start="100" end="bg_alpha" time="0" condition="!Control.IsVisible(31111)">Conditional</animation>
 					<animation effect="fade" start="0" end="100" time="300" condition="Window.Previous(fullscreenvideo) | Window.Previous(FullscreenGame) | Window.Previous(startup)">WindowOpen</animation>
-					<include>ColoredBackgroundImages</include>
+					<include>BlackBackground</include>
 					<visible>![Window.IsActive(Home) + !Player.HasMedia + !String.IsEmpty(Container.ListItem.Art(fanart))]</visible>
 				</control>
 				<control type="group" id="31111">
@@ -1490,7 +1490,7 @@
 		<param name="flipx">false</param>
 		<definition>
 			<control type="image">
-				<texture flipx="$PARAM[flipx]" colordiffuse="EDFFFFFF">lists/panel.png</texture>
+				<texture flipx="$PARAM[flipx]" colordiffuse="flat_background">colors/white.png</texture>
 				<bordertexture border="21" infill="false">overlays/shadow.png</bordertexture>
 				<bordersize>20</bordersize>
 				<width>$PARAM[width]</width>
