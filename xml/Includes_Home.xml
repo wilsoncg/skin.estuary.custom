@@ -353,20 +353,20 @@
 				</include>
 				<visible>$PARAM[visible]</visible>
 				<visible>Integer.IsGreater(Container($PARAM[list_id]).NumItems,0) | Container($PARAM[list_id]).IsUpdating</visible>
-				<itemlayout width="310" height="340">
+				<itemlayout width="210" height="240">
 					<control type="group">
 						<left>70</left>
 						<control type="image">
-							<width>316</width>
+							<width>216</width>
 							<height>200</height>
-							<texture>dialogs/dialog-bg-nobo.png</texture>
+							<texture colordiffuse="flat_background">colors/grey.png</texture>
 							<bordertexture border="21" infill="false">overlays/shadow.png</bordertexture>
 							<bordersize>20</bordersize>
 						</control>
 						<control type="image">
 							<centertop>74</centertop>
 							<left>58</left>
-							<width>200</width>
+							<width>100</width>
 							<height>$PARAM[icon_height]</height>
 							<texture fallback="DefaultFolder.png">$PARAM[icon]</texture>
 							<aspectratio>keep</aspectratio>
@@ -374,7 +374,7 @@
 						<control type="textbox">
 							<left>38</left>
 							<top>106</top>
-							<width>240</width>
+							<width>140</width>
 							<height>70</height>
 							<label>$INFO[ListItem.Label]</label>
 							<font>font25_narrow</font>
@@ -384,7 +384,7 @@
 						</control>
 					</control>
 				</itemlayout>
-				<focusedlayout width="310" height="340">
+				<focusedlayout width="210" height="240">
 					<control type="group">
 						<depth>DepthContentPopout</depth>
 						<left>70</left>
@@ -395,14 +395,14 @@
 							<effect type="zoom" start="115" end="100" time="200" tween="sine" easing="inout" center="228,70" />
 						</animation>
 						<control type="image">
-							<width>316</width>
+							<width>216</width>
 							<height>200</height>
-							<texture>dialogs/dialog-bg-nobo.png</texture>
+							<texture colordiffuse="flat_background">colors/grey.png</texture>
 							<bordertexture border="21" infill="false">overlays/shadow.png</bordertexture>
 							<bordersize>20</bordersize>
 						</control>
 						<control type="image">
-							<width>316</width>
+							<width>216</width>
 							<height>200</height>
 							<texture colordiffuse="button_focus">colors/grey.png</texture>
 							<bordersize>20</bordersize>
@@ -411,7 +411,7 @@
 						<control type="image">
 							<centertop>74</centertop>
 							<left>58</left>
-							<width>200</width>
+							<width>100</width>
 							<height>$PARAM[icon_height]</height>
 							<texture fallback="DefaultFolder.png">$PARAM[icon]</texture>
 							<aspectratio>keep</aspectratio>
@@ -419,7 +419,7 @@
 						<control type="textbox">
 							<left>38</left>
 							<top>106</top>
-							<width>240</width>
+							<width>140</width>
 							<height>70</height>
 							<label>$INFO[ListItem.Label]</label>
 							<font>font25_narrow</font>
