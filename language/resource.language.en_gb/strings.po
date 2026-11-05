@@ -1010,3 +1010,9 @@ msgstr ""
 msgctxt "#31616"
 msgid "All movies"
 msgstr ""
+
+#. viewtype name
+#: /xml/View_505_WallTiled.xml
+msgctxt "#31617"
+msgid "WallTiled"
+msgstr ""

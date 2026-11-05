@@ -47,6 +47,7 @@
 				<animation effect="fade" start="0" end="100" time="100">WindowClose</animation>
 			</control>
 
+			<!-- TODO make include -->
 			<!-- Film information -->
 			<control type="group">
 				<visible>String.IsEqual(Container.ListItem.DBTYPE,movie) + !String.IsEmpty(Container.ListItem.Art(fanart))</visible>
