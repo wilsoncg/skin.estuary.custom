@@ -86,6 +86,12 @@
     				<onclick>Skin.ToggleSetting(expanded_home_sidebar)</onclick>
     				<onclick>ReloadSkin</onclick>
 				</control>
+				<control type="radiobutton" id="710">
+    				<label>Hide View Options label</label>
+    				<include>DefaultSettingButton</include>
+    				<selected>Skin.HasSetting(disable_view_options_label)</selected>
+    				<onclick>Skin.ToggleSetting(disable_view_options_label)</onclick>
+				</control>
 			</control>
 			<control type="grouplist" id="600">
 				<top>133</top>

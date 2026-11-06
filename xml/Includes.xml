@@ -1352,7 +1352,8 @@
 						<height>44</height>
 						<shadowcolor>text_shadow</shadowcolor>
 						<label>$LOCALIZE[33063]</label>
-						<onclick>SetFocus(9000)</onclick>
+						<visible>!Skin.HasSetting(disable_view_options_label)</visible>
+						<onclick>SetFocus(9000)</onclick>						
 						<texturefocus />
 						<texturenofocus />
 					</control>
