@@ -1281,7 +1281,7 @@
 						<fadetime>400</fadetime>
 						<animation effect="fade" time="400">VisibleChange</animation>
 						<texture background="true" colordiffuse="37FFFFFF">$VAR[MediaFanartVar]</texture>
-						<visible>[!Control.IsVisible(502) | $EXP[infodialog_active]] + !Control.IsVisible(505)</visible>
+						<visible>[!Control.IsVisible(502) | $EXP[infodialog_active]] + [!Control.IsVisible(505) | Window.IsVisible(movieinformation)]</visible>
 					</control>
 					<control type="image" id="32112">
 						<include>ThreeQuarterScreenDimensions</include>
@@ -1289,7 +1289,7 @@
 						<fadetime>400</fadetime>
 						<animation effect="fade" time="400">VisibleChange</animation>
 						<texture background="true">$VAR[MediaFanartVar]</texture>
-						<visible>Control.IsVisible(505)</visible>
+						<visible>Window.IsActive(videos) + Control.IsVisible(505) + !Window.IsVisible(movieinformation)</visible>
 					</control>
 					<control type="image">
 						<left>-3</left>

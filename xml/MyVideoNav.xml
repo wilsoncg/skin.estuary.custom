@@ -19,6 +19,7 @@
 			<include>View_502_FanArt</include>
 			<include>View_504_MediaList</include>
 			<include>View_505_WallTiled</include>
+			<!-- Panel showing plot and episode image -->
 			<control type="group">
 				<depth>DepthContentPanel</depth>
 				<include>OpenClose_Left</include>
