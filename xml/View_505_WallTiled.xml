@@ -182,11 +182,41 @@
 			<top>0</top>
 			<visible>Control.IsVisible(505)</visible>
 			<include>Visible_Right</include>
+			<control type="list" id="506">
+				<left>600</left>
+				<top>100</top>
+				<width>700</width>
+				<height>120</height>
+				<orientation>horizontal</orientation>
+				<itemlayout width="300" height="200">
+					<control type="label">
+						<left>0</left>
+						<top>0</top>
+						<width>300</width>
+						<height>200</height>
+						<font>font12</font>
+						<label>$INFO[ListItem.Title]</label>
+					</control>
+				</itemlayout>
+				<focusedlayout width="300" height="200">
+					<control type="label">
+						<left>0</left>
+						<top>0</top>
+						<width>300</width>
+						<height>200</height>
+						<font>font12</font>
+						<label>$INFO[ListItem.Title]</label>
+					</control>
+				</focusedlayout>
+				<content>plugin://plugin.video.episodepicker/</content>
+				<visible>true</visible>
+				<!-- <visible>Container.Content(episodes)</visible> -->
+			</control>
 			<control type="panel" id="505">
 				<left>490</left>
 				<top>50%</top>
 				<right>15</right>
-				<height>100%</height>
+				<height>50%</height>
 				<onleft>9000</onleft>
 				<onright>531</onright>
 				<onup condition="Integer.IsGreater(Container.NumPages,1)">505</onup>
