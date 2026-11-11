@@ -232,47 +232,62 @@
 					<param name="width" value="656" />
 					<param name="flipx" value="$PARAM[flip_bg]" />
 				</include>
-				<control type="image">
-					<left>30</left>
-					<top>110</top>
-					<width>540</width>
-					<height>470</height>
-					<aspectratio aligny="bottom">keep</aspectratio>
-					<fadetime>300</fadetime>
-					<texture fallback="$PARAM[fallback_image]" background="true">$VAR[IconWallThumbVar]</texture>
-					<visible>!String.IsEqual(ListItem.DbType,episode) + !String.IsEqual(ListItem.DBType,song)</visible>
-				</control>
-				<control type="image">
-					<left>30</left>
-					<top>110</top>
-					<width>540</width>
-					<height>330</height>
-					<aspectratio aligny="bottom">keep</aspectratio>
-					<fadetime>300</fadetime>
-					<texture background="true">$INFO[ListItem.Art(tvshow.poster)]</texture>
-					<visible>String.IsEqual(ListItem.DbType,episode)</visible>
-				</control>
-				<control type="image">
-					<left>30</left>
-					<top>110</top>
-					<width>540</width>
-					<height>470</height>
-					<aspectratio aligny="bottom">keep</aspectratio>
-					<fadetime>300</fadetime>
-					<texture fallback="DefaultAudio.png" background="true">$VAR[IconWallThumbVar]</texture>
-					<visible>String.IsEqual(ListItem.DBType,song)</visible>
-				</control>
 				<control type="group">
-					<left>273</left>
-					<top>560</top>
-					<include condition="Skin.HasSetting(circle_rating) | Skin.HasSetting(circle_userrating)">RatingCircle</include>
-					<animation effect="slide" end="0,-140" time="0" condition="String.IsEqual(ListItem.DbType,episode)">conditional</animation>
+					<control type="image">
+						<left>30</left>
+						<top>110</top>
+						<width>180</width>
+						<height>270</height>
+						<aspectratio aligny="bottom">keep</aspectratio>
+						<fadetime>300</fadetime>
+						<texture fallback="$PARAM[fallback_image]" background="true">$VAR[IconWallThumbVar]</texture>
+						<visible>!String.IsEqual(ListItem.DbType,episode) + !String.IsEqual(ListItem.DBType,song)</visible>
+					</control>
+					<control type="image">
+						<left>30</left>
+						<top>110</top>
+						<width>180</width>
+						<height>270</height>
+						<aspectratio aligny="bottom">keep</aspectratio>
+						<fadetime>300</fadetime>
+						<texture background="true">$INFO[ListItem.Art(tvshow.poster)]</texture>
+						<visible>String.IsEqual(ListItem.DbType,episode)</visible>
+					</control>
+					<control type="image">
+						<left>30</left>
+						<top>110</top>
+						<width>180</width>
+						<height>270</height>
+						<aspectratio aligny="bottom">keep</aspectratio>
+						<fadetime>300</fadetime>
+						<texture fallback="DefaultAudio.png" background="true">$VAR[IconWallThumbVar]</texture>
+						<visible>String.IsEqual(ListItem.DBType,song)</visible>
+					</control>
+				</control>
+				<control type="grouplist">
+					<left>230</left>
+					<top>110</top>
+					<orientation>horizontal</orientation>
+					<control type="label">
+						<aligny>center</aligny>
+						<width>86</width>
+						<height>32</height>
+						<label>$INFO[ListItem.Year]</label>
+						<visible>String.IsEqual(ListItem.DbType,episode)</visible>
+					</control>
+					<control type="image">
+						<width>28</width>
+						<height>28</height>
+						<aspectratio align="left" aligny="center">keep</aspectratio>
+						<texture>special://skin/media/$VAR[Mpaa_flags_Var].png</texture>
+						<visible>!String.IsEmpty(ListItem.Mpaa)</visible>
+					</control>
 				</control>
 				<control type="group">
 					<visible>!Container.Content() | !String.isempty(ListItem.Plot)</visible>
 					<left>30</left>
 					<control type="textbox" id="15500">
-						<top>600</top>
+						<top>415</top>
 						<width>540</width>
 						<bottom>70</bottom>
 						<autoscroll time="3000" delay="7000" repeat="5000">!System.HasModalDialog + Skin.HasSetting(AutoScroll)</autoscroll>
@@ -280,7 +295,7 @@
 						<visible>!String.IsEqual(ListItem.DbType,episode) + !String.IsEqual(ListItem.DBType,song)</visible>
 					</control>
 					<control type="textbox" id="15501">
-						<top>465</top>
+						<top>415</top>
 						<width>540</width>
 						<bottom>70</bottom>
 						<autoscroll time="3000" delay="7000" repeat="5000">!System.HasModalDialog + Skin.HasSetting(AutoScroll)</autoscroll>
@@ -289,7 +304,7 @@
 						<visible>String.IsEqual(ListItem.DbType,episode)</visible>
 					</control>
 					<control type="textbox" id="15502">
-						<top>600</top>
+						<top>415</top>
 						<width>540</width>
 						<bottom>70</bottom>
 						<autoscroll time="3000" delay="3000" repeat="5000">!System.HasModalDialog + Skin.HasSetting(AutoScroll)</autoscroll>

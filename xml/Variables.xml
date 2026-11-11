@@ -962,4 +962,68 @@
 		<value condition="!RetroPlayer.DiscEjected">60FFFFFF</value>
 		<value>FFFFFFFF</value>
 	</variable>
+
+	<variable name="Mpaa_flags_Var">
+		<value condition="String.IsEqual(ListItem.Mpaa,UK:U)">bbfc-u</value>
+		<value condition="String.IsEqual(ListItem.Mpaa,UK:PG)">bbfc-pg</value>
+		<value condition="String.IsEqual(ListItem.Mpaa,UK:12)">bbfc-12</value>
+		<value condition="String.IsEqual(ListItem.Mpaa,UK:12A)">bbfc-12</value>
+		<value condition="String.IsEqual(ListItem.Mpaa,UK:15)">bbfc-15</value>
+		<value condition="String.IsEqual(ListItem.Mpaa,Rated UK:15)">bbfc-15</value>
+		<value condition="String.IsEqual(ListItem.Mpaa,UK:18)">bbfc-18</value>
+		<value condition="String.IsEqual(ListItem.Mpaa,Rated UK:18)">bbfc-18</value>
+		<value condition="String.IsEqual(ListItem.Mpaa,GB-U)">bbfc-u</value>
+		<value condition="String.IsEqual(ListItem.Mpaa,GB-PG)">bbfc-pg</value>
+		<value condition="String.IsEqual(ListItem.Mpaa,GB-12)">bbfc-12</value>
+		<value condition="String.IsEqual(ListItem.Mpaa,GB-15)">bbfc-15</value>
+		<value condition="String.IsEqual(ListItem.Mpaa,GB-18)">bbfc-18</value>
+		<value condition="String.IsEqual(ListItem.Mpaa,GB-R18)">bbfc-r18</value>
+		<value condition="String.IsEqual(ListItem.Mpaa,TV-PG)">bbfc-pg</value>
+		<value condition="String.IsEqual(ListItem.Mpaa,TV-14)">bbfc-12</value>
+		<value condition="String.IsEqual(ListItem.Mpaa,TV-G)">bbfc-pg</value>
+		<value condition="String.IsEqual(ListItem.Mpaa,TV-MA)">bbfc-18</value>
+		<value condition="String.IsEqual(ListItem.Mpaa,TV-PA)">bbfc-pg</value>
+		<value condition="String.IsEqual(ListItem.Mpaa,TV-Y)">TV-Y</value>
+		<value condition="String.IsEqual(ListItem.Mpaa,TV-Y7)">TV-Y7</value>
+		<value condition="String.IsEqual(ListItem.Mpaa,BBFC-12)">bbfc-12</value>
+		<value condition="String.IsEqual(ListItem.Mpaa,BBFC-12A)">bbfc-12</value>
+		<value condition="String.IsEqual(ListItem.Mpaa,BBFC-15)">bbfc-15</value>
+		<value condition="String.IsEqual(ListItem.Mpaa,U)">bbfc-u</value>
+		<value condition="String.IsEqual(ListItem.Mpaa,PG)">bbfc-pg</value>
+		<value condition="String.IsEqual(ListItem.Mpaa,12)">bbfc-12</value>
+		<value condition="String.IsEqual(ListItem.Mpaa,12A)">bbfc-12</value>
+		<value condition="String.IsEqual(ListItem.Mpaa,15)">bbfc-15</value>
+		<value condition="String.IsEqual(ListItem.Mpaa,18)">bbfc-18</value>
+		<value condition="String.IsEqual(ListItem.Mpaa,Guidance)">bbfc-pg</value>
+		<value condition="String.IsEqual(ListItem.Mpaa,Mature)">bbfc-18</value>
+		<value condition="String.IsEqual(ListItem.Mpaa,Teen)">bbfc-12</value>
+		
+		<value condition="String.IsEqual(VideoPlayer.Mpaa,UK:U)">bbfc-u</value>
+		<value condition="String.IsEqual(VideoPlayer.Mpaa,UK:PG)">bbfc-pg</value>
+		<value condition="String.IsEqual(VideoPlayer.Mpaa,UK:12)">bbfc-12</value>
+		<value condition="String.IsEqual(VideoPlayer.Mpaa,UK:12A)">bbfc-12</value>
+		<value condition="String.IsEqual(VideoPlayer.Mpaa,UK:15)">bbfc-15</value>
+		<value condition="String.IsEqual(VideoPlayer.Mpaa,Rated UK:15)">bbfc-15</value>
+		<value condition="String.IsEqual(VideoPlayer.Mpaa,UK:18)">bbfc-18</value>
+		<value condition="String.IsEqual(VideoPlayer.Mpaa,Rated UK:18)">bbfc-18</value>
+		<value condition="String.IsEqual(VideoPlayer.Mpaa,TV-PG)">bbfc-pg</value>
+		<value condition="String.IsEqual(VideoPlayer.Mpaa,TV-14)">bbfc-12</value>
+		<value condition="String.IsEqual(VideoPlayer.Mpaa,TV-G)">bbfc-pg</value>
+		<value condition="String.IsEqual(VideoPlayer.Mpaa,TV-MA)">bbfc-18</value>  
+		<value condition="String.IsEqual(VideoPlayer.Mpaa,TV-PA)">bbfc-pg</value>
+		<value condition="String.IsEqual(VideoPlayer.Mpaa,TV-Y)">bbfc-u</value>
+		<value condition="String.IsEqual(VideoPlayer.Mpaa,TV-Y7)">bbfc-u</value>
+		<value condition="String.IsEqual(VideoPlayer.Mpaa,BBFC-12)">bbfc-12</value>
+		<value condition="String.IsEqual(VideoPlayer.Mpaa,BBFC-12A)">bbfc-12</value>
+		<value condition="String.IsEqual(VideoPlayer.Mpaa,BBFC-15)">bbfc-15</value>
+		<value condition="String.IsEqual(VideoPlayer.Mpaa,U)">bbfc-u</value>
+		<value condition="String.IsEqual(VideoPlayer.Mpaa,PG)">bbfc-pg</value>
+		<value condition="String.IsEqual(VideoPlayer.Mpaa,12)">bbfc-12</value>
+		<value condition="String.IsEqual(VideoPlayer.Mpaa,12A)">bbfc-12</value>
+		<value condition="String.IsEqual(VideoPlayer.Mpaa,15)">bbfc-15</value>
+		<value condition="String.IsEqual(VideoPlayer.Mpaa,18)">bbfc-18</value>
+		<value condition="String.IsEqual(VideoPlayer.Mpaa,Guidance)">bbfc-pg</value>
+		<value condition="String.IsEqual(VideoPlayer.Mpaa,Mature)">bbfc-18</value>
+		<value condition="String.IsEqual(VideoPlayer.Mpaa,Teen)">bbfc-12</value>
+	</variable>
 </includes>
