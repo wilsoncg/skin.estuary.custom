@@ -231,6 +231,7 @@
 				<include content="ContentPanel">
 					<param name="width" value="656" />
 					<param name="flipx" value="$PARAM[flip_bg]" />
+					<param name="background" value="black" />
 				</include>
 				<control type="group">
 					<control type="image">

@@ -1499,9 +1499,10 @@
 		<param name="top">-10%</param>
 		<param name="height">120%</param>
 		<param name="flipx">false</param>
+		<param name="background">flat_background</param>
 		<definition>
 			<control type="image">
-				<texture flipx="$PARAM[flipx]" colordiffuse="flat_background">colors/white.png</texture>
+				<texture flipx="$PARAM[flipx]" colordiffuse="$PARAM[background]">colors/white.png</texture>
 				<bordertexture border="21" infill="false">overlays/shadow.png</bordertexture>
 				<bordersize>20</bordersize>
 				<width>$PARAM[width]</width>
