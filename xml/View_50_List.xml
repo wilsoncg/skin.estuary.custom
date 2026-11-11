@@ -284,6 +284,7 @@
 						<width>540</width>
 						<bottom>70</bottom>
 						<autoscroll time="3000" delay="7000" repeat="5000">!System.HasModalDialog + Skin.HasSetting(AutoScroll)</autoscroll>
+						<font>font12</font>
 						<label>$INFO[ListItem.Plot]</label>
 						<visible>String.IsEqual(ListItem.DbType,episode)</visible>
 					</control>
