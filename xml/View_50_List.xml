@@ -267,20 +267,44 @@
 				<control type="grouplist">
 					<left>230</left>
 					<top>110</top>
-					<orientation>horizontal</orientation>
-					<control type="label">
-						<aligny>center</aligny>
-						<width>86</width>
-						<height>32</height>
-						<label>$INFO[ListItem.Year]</label>
-						<visible>String.IsEqual(ListItem.DbType,episode)</visible>
+					<orientation>vertical</orientation>
+					<itemgap>0</itemgap>
+					<visible>String.IsEqual(ListItem.DbType,episode)</visible>
+
+					<!-- Year and Rating -->
+					<control type="grouplist">
+						<orientation>horizontal</orientation>
+						<width>340</width>
+        				<height>40</height>
+
+						<control type="label">
+							<aligny>center</aligny>
+							<width>80</width>
+							<height>40</height>
+							<label>$INFO[ListItem.Year]</label>
+						</control>
+						<control type="image">
+							<width>24</width>
+							<height>40</height>
+							<aspectratio align="left" aligny="center">keep</aspectratio>
+							<texture>special://skin/media/$VAR[Mpaa_flags_Var].png</texture>
+							<visible>!String.IsEmpty(ListItem.Mpaa)</visible>
+						</control>
 					</control>
-					<control type="image">
-						<width>28</width>
-						<height>28</height>
-						<aspectratio align="left" aligny="center">keep</aspectratio>
-						<texture>special://skin/media/$VAR[Mpaa_flags_Var].png</texture>
-						<visible>!String.IsEmpty(ListItem.Mpaa)</visible>
+
+					<control type="label">
+						<width>340</width>
+						<height>40</height>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Duration(m)] mins</label>
+					</control>
+					<control type="label">
+						<width>340</width>
+						<height>80</height>
+						<aligny>top</aligny>
+						<font>font12</font>
+						<wrapmultiline>true</wrapmultiline>
+						<label>$INFO[ListItem.Genre(pipe)]</label>
 					</control>
 				</control>
 				<control type="group">
