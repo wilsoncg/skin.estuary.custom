@@ -306,6 +306,13 @@
 						<wrapmultiline>true</wrapmultiline>
 						<label>$INFO[ListItem.Genre(pipe)]</label>
 					</control>
+					<control type="label">
+						<width>340</width>
+						<height>40</height>
+						<aligny>top</aligny>
+						<font>font12</font>
+						<label>Rating: $INFO[ListItem.Rating]</label>
+					</control>
 				</control>
 				<control type="group">
 					<visible>!Container.Content() | !String.isempty(ListItem.Plot)</visible>
