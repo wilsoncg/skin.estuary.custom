@@ -183,44 +183,34 @@
 			<visible>Control.IsVisible(505)</visible>
 			<include>Visible_Right</include>
 			<control type="list" id="506">
-				<left>600</left>
-				<top>100</top>
-				<width>700</width>
+				<left>535</left>
+				<top>55%</top>
+				<width>400</width>
 				<height>120</height>
+				<ondown>505</ondown>
 				<orientation>horizontal</orientation>
-				<itemlayout width="300" height="200">
-					<control type="label">
-						<left>0</left>
-						<top>0</top>
-						<width>300</width>
-						<height>200</height>
-						<font>font12</font>
-						<label>$INFO[ListItem.Title]</label>
-					</control>
+				<itemlayout width="700" height="120">
+					<include content="InfoWallEpisodePickerLayout">
+						<param name="focused" value="false" />
+					</include>
 				</itemlayout>
-				<focusedlayout width="300" height="200">
-					<control type="label">
-						<left>0</left>
-						<top>0</top>
-						<width>300</width>
-						<height>200</height>
-						<font>font12</font>
-						<label>$INFO[ListItem.Title]</label>
-					</control>
+				<focusedlayout width="700" height="120">
+					<include content="InfoWallEpisodePickerLayout">
+						<param name="focused" value="true" />
+					</include>
 				</focusedlayout>
-				<content>plugin://plugin.video.episodepicker/</content>
-				<visible>true</visible>
-				<!-- <visible>Container.Content(episodes)</visible> -->
+				<content>plugin://plugin.video.episodepicker/?context=$INFO[Container.FolderPath]</content>
+				<visible>Container.Content(episodes)</visible>
 			</control>
 			<control type="panel" id="505">
 				<left>490</left>
-				<top>50%</top>
+				<top>65%</top>
 				<right>15</right>
 				<height>50%</height>
 				<onleft>9000</onleft>
 				<onright>531</onright>
-				<onup condition="Integer.IsGreater(Container.NumPages,1)">505</onup>
-				<onup condition="!Integer.IsGreater(Container.NumPages,1)">9000</onup>
+				<onup condition="!Container(505).Row(0)">505</onup>
+				<onup>506</onup>
 				<ondown>505</ondown>
 				<viewtype label="31617">icon</viewtype>
 				<preloaditems>2</preloaditems>
@@ -248,7 +238,6 @@
 				<itemlayout height="301" width="300" condition="Container.Content(episodes) | Container.Content(videos) | [Container.Content(musicvideos) + !Skin.HasSetting(show_musicvideoposter)]">
 					<control type="group">
 						<left>64</left>
-						<top>110</top>
 						<include content="InfoWallEpisodeLayout">
 							<param name="focused" value="false" />
 							<param name="thumb_label" value="$INFO[ListItem.Premiered]" />
@@ -261,7 +250,6 @@
 						<animation effect="zoom" start="100" end="110" time="200" tween="sine" easing="inout" center="220,250">Focus</animation>
 						<animation effect="zoom" start="110" end="100" time="200" tween="sine" easing="inout" center="220,250">UnFocus</animation>
 						<left>64</left>
-						<top>110</top>
 						<include content="InfoWallEpisodeLayout">
 							<param name="focused" value="true" />
 							<param name="thumb_label" value="$INFO[ListItem.Premiered]" />
