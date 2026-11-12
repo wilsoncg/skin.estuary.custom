@@ -301,19 +301,17 @@
 					</control>
 					<control type="label">
 						<width>340</width>
-						<height>80</height>
-						<aligny>top</aligny>
+						<height>40</height>
+						<font>font12</font>
+						<label>Rating: $INFO[ListItem.Rating]</label>
+					</control>
+					<control type="label">
+						<width>340</width>
 						<font>font12</font>
 						<wrapmultiline>true</wrapmultiline>
 						<label>$INFO[ListItem.Genre(pipe)]</label>
 					</control>
-					<control type="label">
-						<width>340</width>
-						<height>40</height>
-						<aligny>top</aligny>
-						<font>font12</font>
-						<label>Rating: $INFO[ListItem.Rating]</label>
-					</control>
+					
 				</control>
 				<control type="group">
 					<visible>!Container.Content() | !String.isempty(ListItem.Plot)</visible>
